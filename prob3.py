@@ -3,7 +3,7 @@
 def MissingNumber(array,n):
         l=sum(array)
         o=(n*(n+1))/2
-        return l-o
+        return o-l
 n=int(input())
 array=list(map(int,input().split()))
 s=MissingNumber(array,n)
