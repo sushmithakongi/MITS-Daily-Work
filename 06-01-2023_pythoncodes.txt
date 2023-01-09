@@ -1,0 +1,170 @@
+1 Task name:
+
+You tell, I do
+
+Description:
+Write calculations using functions and get the results. Let's have a look at some examples:
+seven(times(five())) # must return 35
+four(plus(nine())) # must return 13
+eight(minus(three())) # must return 5
+six(divided_by(two())) # must return 3
+
+Conditions:
+● There must be a function for each number from 0 ("zero") to 9 ("nine")
+● There must be a function for each of the following mathematical operations: plus,
+minus, times, divided_by
+● Each calculation consist of exactly one operation and two numbers
+● The most outer function represents the left operand, the most inner function
+represents the right operand
+● Division should be integer division. For example, this should return 2, not
+2.666666...:
+eight(divided_by(three()))
+
+source code:
+
+def times(a=0):
+  l.append('*')
+  return
+def plus(a=0):
+  l.append('+')
+  return
+def minus(a=0):
+  l.append('-')
+  return
+def divided_by(a=0):
+  l.append('/')
+  return
+def one(a=0):
+  l.append('1')
+  if len(l)==3:
+    print(int(eval(''.join(l[::-1]))))
+    for i in range(3):
+      l.pop()
+  return
+def two(a=0):
+  l.append('2')
+  if len(l)==3:
+    print(int(eval(''.join(l[::-1]))))
+    for i in range(3):
+      l.pop()
+  return
+def three(a=0):
+  l.append('3')
+  if len(l)==3:
+    print(int(eval(''.join(l[::-1]))))
+    for i in range(3):
+      l.pop()
+  return
+def four(a=0):
+  l.append('4')
+  if len(l)==3:
+    print(int(eval(''.join(l[::-1]))))
+    for i in range(3):
+      l.pop()
+  return
+def five(a=0):
+  l.append('5')
+  if len(l)==3:
+    print(int(eval(''.join(l[::-1]))))
+    for i in range(3):
+      l.pop()
+  return
+def six(a=0):
+  l.append('6')
+  if len(l)==3:
+    print(int(eval(''.join(l[::-1]))))
+    for i in range(3):
+      l.pop()
+  return
+def seven(a=0):
+  l.append('7')
+  if len(l)==3:
+    print(int(eval(''.join(l[::-1]))))
+    for i in range(3):
+      l.pop()
+  return
+def eight(a=0):
+  l.append('8')
+  if len(l)==3:
+    print(int(eval(''.join(l[::-1]))))
+    for i in range(3):
+      l.pop()
+  return
+def nine(a=0):
+  l.append('9')
+  if len(l)==3:
+    print(int(eval(''.join(l[::-1]))))
+    for i in range(3):
+      l.pop()
+  return
+def zero(a=0):
+  l.append('0')
+  if len(l)==3:
+    print(int(eval(''.join(l[::-1]))))
+    for i in range(3):
+      l.pop()
+  return
+
+l=[]
+
+seven(times(five())) #inputs
+four(plus(nine()))
+eight(minus(three()))
+six(divided_by(two()))
+eight(divided_by(three()))
+
+output:
+35
+13
+5
+3
+2
+
+
+2  Maximum Ice Cream Bars
+
+It is a sweltering summer day, and a boy wants to buy some ice cream bars.
+At the store, there are n ice cream bars. You are given an array costs of length n, where costs[i] is the price of the ith ice cream bar in coins. The boy initially has coins coins to spend, and he wants to buy as many ice cream bars as possible. 
+Return the maximum number of ice cream bars the boy can buy with coins coins.
+Note: The boy can buy the ice cream bars in any order.
+
+Example 1:
+Input: costs = [1,3,2,4,1], coins = 7
+Output: 4
+Explanation: The boy can buy ice cream bars at indices 0,1,2,4 for a total price of 1 + 3 + 2 + 1 = 7.
+Example 2:
+Input: costs = [10,6,8,7,7,8], coins = 5
+Output: 0
+Explanation: The boy cannot afford any of the ice cream bars.
+Example 3:
+Input: costs = [1,6,3,1,2,5], coins = 20
+Output: 6
+Explanation: The boy can buy all the ice cream bars for a total price of 1 + 6 + 3 + 1 + 2 + 5 = 18.
+ 
+source code:
+
+class Solution:
+    def maxIceCream(self, costs: List[int], coins: int) -> int:
+        costs.sort()
+        i=0
+        n=len(costs)
+        c=0
+        while coins and i<n:
+            if costs[i]<=coins:
+                coins-=costs[i]
+                c+=1
+            else:
+                break
+            i+=1
+        return c
+a=Solution()
+print(a.maxIceCream(list(map(int,input().split())),input()))
+
+input:
+1 3 2 4 1
+7
+
+output:
+4
+
+
