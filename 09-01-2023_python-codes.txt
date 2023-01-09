@@ -1,0 +1,73 @@
+1. Binary Tree Preorder Traversal
+
+Given the root of a binary tree, return the preorder traversal of its nodes' values.
+
+Example 1:
+
+Input: root = [1,null,2,3]
+Output: [1,2,3]
+Example 2:
+
+Input: root = []
+Output: []
+Example 3:
+
+Input: root = [1]
+Output: [1]
+ 
+Source code:
+
+
+class Solution:
+    def preorderTraversal(self, root: Optional[TreeNode]) -> List[int]:
+        l=[]
+        def f(root):
+            if root:
+                l.append(root.val)
+            else:
+                return
+            f(root.left)
+            f(root.right)
+        f(root)
+        return l
+
+
+2   Longest Substring Without Repeating Characters
+
+Given a string s, find the length of the longest 
+substring without repeating characters.
+
+Example 1:
+
+Input: s = "abcabcbb"
+Output: 3
+Explanation: The answer is "abc", with the length of 3.
+Example 2:
+
+Input: s = "bbbbb"
+Output: 1
+Explanation: The answer is "b", with the length of 1.
+Example 3:
+
+Input: s = "pwwkew"
+Output: 3
+Explanation: The answer is "wke", with the length of 3.
+Notice that the answer must be a substring, "pwke" is a subsequence and not a substring.
+
+source code: 
+
+
+class Solution:
+    def lengthOfLongestSubstring(self, s: str) -> int:
+        d={}
+        res=0
+        a=0
+        for i,j in enumerate(s):
+            if j not in d or d[j]<a:
+                res=max(res,i-a+1)
+            else:
+                a=d[j]+1
+            d[j]=i        
+        return res
+        
+ 
