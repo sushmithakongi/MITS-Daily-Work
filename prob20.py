@@ -9,7 +9,8 @@ Return the maximum number of coins that you can have.
 Example 1:
 
 Input: piles = [2,4,1,2,7,8]
-Output: 9"""
+Output: 9
+"""
 def maxCoins(piles):
         my_coins = 0
         piles.sort()
