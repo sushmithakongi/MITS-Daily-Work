@@ -1,0 +1,65 @@
+Python codes 
+Problem Statement
+1. print 1 to n prime numbers in python (#prime number series)
+Source code:
+n = int(input())         
+for num in range(2,n+1):
+    count = 0
+    for j in range(1,num+1):
+        if num%j==0:
+            count += 1
+    if count==2:
+        print(num,end=" ")
+
+2.To find a factorial of a number
+Source code :
+def factorial(n):
+    fact = 1
+    for i in range(1,n+1):
+        fact = fact*i
+    return fact
+x = int(input())
+
+3. reverse of a given number 
+Source code :
+n=int(input("Enter a number"))
+print("The entered number is ",n)
+reverse=0
+while n!=0:
+   remainder=n%10
+   reverse=(reverse*10)+remainder
+   n=n//10
+print("The reverse of the entered number is ",reverse)
+ 
+4.palindrome or not
+Source code:
+n=int(input("Enter a number"))
+a=n
+reverse=0
+while n!=0:
+   remainder=n%10
+   reverse=(reverse*10)+remainder
+   n=n//10
+if reverse==a:
+  print(“the given number is palindrome”)
+else:
+  print((“the given number is not palindrome”)
+
+5.Remove duplicates from a python list
+Source code:
+a=[10,20,30,20,10,50,60,]
+dup_items = set()
+uniq_items = []
+for x in a:
+    if x not in dup_items:
+        uniq_items.append(x)
+        dup_items.add(x)
+print(dup_items)
+6.Reverse the order of items in array
+Source code:
+from array import *
+array_num = array('i',[1,3,5,3,7,1,9,3])
+print("original array : "+str(array_num))
+array_num.reverse()
+print ("reverse the order of the items:")
+print(str(array_num))
