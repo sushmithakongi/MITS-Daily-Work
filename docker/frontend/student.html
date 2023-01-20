@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Register Form</title>
+    <!-- <script>
+        function getData() {
+            fetch("http://127.0.0.1:5000", {
+                method: "GET",
+                headers: {
+                    "Content-type": "application/json; charset=UTF-8",
+                },
+            })
+                .then((response) => response.json())
+                .then((json) => console.log(json));
+            console.log("perform get request")
+        }
+    </script> -->
+</head>
+
+<body>
+    <center>
+    <form action="http://127.0.0.1:5000/home" method="POST">
+        <h1> Student Details </h1>
+        <table>
+            <tr>
+                <td>
+                    Name:
+                </td>
+                <td>
+                    <input type="text" placeholder="Name" name="username" >
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Roll No:
+                </td>
+                <td>
+                    <input type="number" placeholder="rollno" name="rollno" >
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Password:
+                </td>
+                <td>
+                    <input type="Password" placeholder="Password" name="password" >
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Gender:
+                </td>
+                <td>
+                    <input type="radio" name="Gender" value="m">Male
+                    <input type="radio" name="Gender" value="f">Female
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Email:
+                </td>
+                <td>
+                    <input type="mail" placeholder="email" name="email" >
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Phone no:
+                </td>
+                <td>
+                    <select>
+                        <option selected hidden value="">select</option>
+                        <option value="977">977</option>
+                        <option value="978">978</option>
+                        <option value="979">979</option>
+                        <option value="980">980</option>
+                        <option value="991">991</option>
+                    </select>
+                    <input type="Phone" placeholder="**********" name="phonecode" >
+                </td>
+            </tr>
+        </table>
+        <br>
+        <tr>
+            <td>
+                <input type="reset" value="clear" name="">
+                <!-- <input type="Submit" value="Submit" name="" required> -->
+                <button>Submit</button>
+            </td>
+        </tr>
+      
+    </form>
+</center> 
+
+</body>
+</html>
