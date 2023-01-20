@@ -1,0 +1,38 @@
+version: '3.8'
+services:
+
+  angular:
+    image: amreen1289/pubgfrontend
+    container_name: pubgfrontend
+    # build: .
+    expose:
+      - 4200
+    volumes:
+      - ./:/app
+    ports:
+      - "4200:80"
+    restart: always
+
+  node:
+    image: amreen1289/pubg-backend
+    container_name: pubgbackend
+    # build:
+    # context: .
+    # dockerfile: Dockerfile
+    expose:
+      - 4000
+      # volumes:
+      #   - .:/node-app
+      # - node_modules:/node-app/node_modules
+    ports:
+      - "4000:4000"
+    working_dir: /node-app
+    restart: always
+    # stdin_open : true
+    # tty : true
+
+    # ports:
+    #   - "80:8080"
+    # volumes:
+    #   - .:/home/node/app
+    #   - node_modules:/home/node/app/node_modules
