@@ -1,0 +1,20 @@
+version: '2'
+services:
+    frontend:
+      image: tejavardhan/frontend:latest
+      container_name: frontendimage
+      restart: always
+      expose:
+        - 85
+      ports:
+        - 85:80
+    
+    backend:
+      image: tejavardhan/backend:latest
+      container_name: backendimage
+      restart: always
+      expose:
+        - 4040
+      ports:
+        - 4040:5000
+        
