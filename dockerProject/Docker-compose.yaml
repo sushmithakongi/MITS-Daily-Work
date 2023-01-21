@@ -1,20 +1,23 @@
 version: '2'
 services:
-  #Nginx Service
-   webserver:
-     image: nginx:alpine
-     container_name: 40f2fce72cd340b239642dc7b84542af0b7adb75c55bbfde426d9076c3bee3c9
-     restart: unless-stopped
+   frontend:
+     image: harshapriyakondamuru/frontendimage:latest
+     container_name: fimage
+     restart: always
+     expose:
+       - 81
      ports:
-       - "80:80"
-       - "443:443"
-   flask:
-       build:
-            context: ../.
-            dockerfile: Dockerfile
-       image: flask:v1
-       container_name: 598d450b11f9283e87c6c4189d9be86d72658ec136e8940f11274892f92a5ebf
-       command: python /flask_code/app.py
-
+       - 81:80
+       
+   backend:
+       #build: back-docker
+            #context: ../.
+            #dockerfile: 
+       image: harshapriyakondamuru/backendimage:v1
+       container_name: bimage
+       #workdir: /app
+       restart: always
+       expose:
+         - 5000
        ports:
-            - 8080:5000
+         - 5000:5000
