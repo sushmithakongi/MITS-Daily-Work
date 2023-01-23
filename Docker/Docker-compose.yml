@@ -4,15 +4,16 @@ services:
    webserver:
     #  build:
           # dockerfile: Dockerfile
-     image: gayathri537/frontend:v1
+     image: charitha/frontend:v1
      container_name: 40f2fce72cd3
      ports:
        - 86:80
-   flask:
-      #  build:
-      #       context: ../.
-      #       dockerfile: Dockerfile
-       image: gayathri537/backend:v2
-       container_name: 598d450b11f9
-       command: python -m flask run
-       ports: 5000:3000
+   phpmyadmin:
+    image: charitha/backend:5.0.1
+    restart: always
+    environment:
+      PMA_HOST: mysql-server
+      PMA_USER: root
+      PMA_PASSWORD: secret
+    ports:
+      - "8080:80"
