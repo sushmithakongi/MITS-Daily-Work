@@ -1,0 +1,19 @@
+version: '3.8'
+services:
+  #Nginx Service
+   webserver:
+    #  build:
+          # dockerfile: Dockerfile
+     image: gayathri537/frontend:flatest
+     container_name: dockerfend
+     ports:
+       - 89:80
+   flask:
+      #  build:
+      #       context: ../.
+      #       dockerfile: Dockerfile
+       image: gayathri537/backend:latest
+       container_name: dockerbend
+       command: python -m flask run
+       ports:
+            - 5000:3000
