@@ -1,0 +1,40 @@
+<html>
+	<head>
+		<title>Student Form</title>
+	</head>
+	<body>
+		
+		<div style="  background-image: url('image3.jpg'); background-repeat: no-repeat; background-attachment: fixed;
+		background-size: cover;
+		color: #000000; border-radius: 5px; " align="center">
+		<form action="http://127.0.0.1:5000/home" method="POST">
+		<table>
+		<p><h1 style="    color: rgb(0, 0, 0);"><u>Personal Details </h1></u></p>
+			<p><LABEL><b>NAME&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	: </b></label>
+			<input type="text" id="name" placeholder="Enter Name Here" name="StudentName">
+			</p>
+			<p>
+			<LABEL><b>ROLL NO:<b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	: </b></label>
+			<input type="testarea" id="RollNo" placeholder="Enter roll no" name="RollNo">
+			</p>
+			<p>
+			<LABEL><b>CONTACT&nbsp;&nbsp;&nbsp;&nbsp;	: </b></label>
+			<input type="number" id="num" placeholder="Enter no. Here" name="phone">
+			</p>
+			<LABEL><b>CLG MAIL&nbsp;&nbsp;&nbsp;	: </b></label>
+			<input type="textarea" id="email" placeholder="Enter mail id" name="mail">
+			</p>
+			<tr>
+			<td><b>Branch :</b></td></td>
+			<td>
+			<input type="radio" name="bval" value="CSE" required>CSE
+			<input type="radio" name="bval" value="CST" required>CST
+			</td>
+			</tr>
+			<tr>
+			<td><input type="submit" value="Submit" name="submit"></td>
+			</tr>
+		</form>
+		</div>
+	</body>
+</html>

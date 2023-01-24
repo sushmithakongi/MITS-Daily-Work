@@ -27,6 +27,7 @@ r = Renault()
 r.mileage()   
   
 s = Suzuki()   
-s.mileage()   
+s.mileage() 
+  
 d = Duster()   
 d.mileage()  

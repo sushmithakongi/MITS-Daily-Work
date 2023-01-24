@@ -1,0 +1,19 @@
+version: '3.8'
+services:
+  #Nginx Service
+   webserver:
+    #  build:
+          # dockerfile: Dockerfile
+     image: saicharithav/frontend:frontendimage
+     container_name: 40f2fce72cd3
+     ports:
+       - 86:80
+   flask:
+      #  build:
+      #       context: ../.
+      #       dockerfile: Dockerfile
+       image: saicharithav/backend:backendimage
+       container_name: 598d450b11f9
+       command: python -m flask run
+       ports:
+            - 5000:3000
