@@ -1,0 +1,23 @@
+version: '2'
+services:
+   frontend:
+     image: harshapriyakondamuru/frontendimage:latest
+     container_name: fimage
+     restart: always
+     expose:
+       - 81
+     ports:
+       - 81:80
+       
+   backend:
+       #build: back-docker
+            #context: ../.
+            #dockerfile: 
+       image: harshapriyakondamuru/backendimage:v1
+       container_name: bimage
+       #workdir: /app
+       restart: always
+       expose:
+         - 5000
+       ports:
+         - 5000:5000
