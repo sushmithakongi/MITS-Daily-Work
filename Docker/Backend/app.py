@@ -13,7 +13,7 @@ app = Flask(__name__)
 def home():
     
 	if(request.method == 'POST'):
-		data = "hello world"
+		data = "Welcome..Have a good day"
 		return data
 	return "hello"
 
