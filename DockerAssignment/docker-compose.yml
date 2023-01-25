@@ -5,15 +5,16 @@ services:
     #  build:
           # dockerfile: Dockerfile
      image: saicharithav/frontend:frontendimage
-     container_name: 40f2fce72cd3
+     container_name: frontendimage
      ports:
-       - 86:80
+       - 81:80
    flask:
       #  build:
       #       context: ../.
       #       dockerfile: Dockerfile
        image: saicharithav/backend:backendimage
-       container_name: 598d450b11f9
+       container_name: 6096415d8130
        command: python -m flask run
        ports:
-            - 5000:3000
+            - 5040:5000
+            
