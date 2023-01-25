@@ -15,7 +15,7 @@ def home():
 	if(request.method == 'POST'):
 		data = "Welcome..Have a good day"
 		return data
-	return "hello"
+	#return "hello"
 
 
 # A simple function to calculate the square of a number
@@ -30,5 +30,5 @@ def home():
 
 
 # driver function
-if __name__ == '_main_':
+if __name__ == '__main__':
 	app.run(debug = True)
