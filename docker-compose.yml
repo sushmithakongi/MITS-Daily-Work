@@ -1,0 +1,23 @@
+version: '2'
+services:
+   frontend:
+     image: prasadk31/frontendd:v1
+     container_name: frontimage
+     restart: always
+     expose:
+       - 83
+     ports:
+       - 83:80
+       
+   backend:
+       #build: back-docker
+            #context: ../.
+            #dockerfile: 
+       image: prasadk31/backendd:v2
+       container_name: backimage
+       #workdir: /app
+       restart: always
+       expose:
+         - 5000
+       ports:
+         - 5000:5000
