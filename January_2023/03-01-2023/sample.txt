@@ -1,0 +1,9 @@
+s1=input("s1=")
+s2=input("s2=")
+if(sorted(s1)==sorted(s2)):
+print("The strings are anagrams.")
+else:
+print("The strings aren't anagrams.")
+input--> s1=teja s2=vardhan
+
+output--> The strings aren't anagrams
