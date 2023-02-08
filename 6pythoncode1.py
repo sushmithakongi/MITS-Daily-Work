@@ -28,3 +28,4 @@ while N>0:
         shoes.remove(size) 
         N = N-1 
         print(sum)
+        
