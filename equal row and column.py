@@ -16,7 +16,6 @@ Explanation: There are 3 equal row and column pairs:
 - (Row 3, Column 2): [2,4,2,2]"""
 def equalPairs(grid):
         columns = [[grid[j][i] for j in range(len(grid))] for i in range(len(grid))]
-        
         count = 0
         for i in range(len(grid)):
             for j in range(len(grid)):
