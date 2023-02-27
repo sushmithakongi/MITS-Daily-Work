@@ -1,4 +1,4 @@
-#Go program to read an array and counts the positive and negative
+#program to read an array and counts the positive and negative
 #numbers and prints the maximum count
 #Input:[1,2,3,0,0,-1,-2,-3,-4]
 #Output:4
